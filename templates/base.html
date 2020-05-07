@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- BEGIN HEAD -->
+
+
+<!-- Mirrored from radixtouch.in/templates/admin/smart/source/hover/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Nov 2019 01:45:49 GMT -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="description" content="Responsive Admin Template" />
+  <meta name="author" content="SmartUniversity" />
+  <!-- google font -->
+  
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+  <!-- icons {{ url_for('static', filename='') }} -->
+  <link href="{{ url_for('static', filename='fonts/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='fonts/material-design-icons/material-icon.css') }}" rel="stylesheet" type="text/css" />
+  <!--bootstrap -->
+  <link href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='assets/plugins/summernote/summernote.css') }}" rel="stylesheet">
+  <!-- Material Design Lite CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/plugins/material/material.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/material_style.css') }}">
+  <!-- inbox style -->
+  <link href="{{ url_for('static', filename='assets/css/pages/inbox.min.css') }}" rel="stylesheet" type="text/css" />
+  <!-- Theme Styles -->
+  <link href="{{ url_for('static', filename='assets/css/theme/hover/theme_style.css') }}" rel="stylesheet" id="rt_style_components" type="text/css" />
+  <link href="{{ url_for('static', filename='assets/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='assets/css/theme/hover/style.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='assets/css/theme/hover/theme-color.css') }}" rel="stylesheet" type="text/css" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}" />
+  
+  {% block head %}
+  {% endblock %}
+
+</head>
+<!-- END HEAD -->
+
+  <body
+  class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+   <!-- start header -->
+    <div class="page-header navbar navbar-fixed-top">
+      <div class="page-header-inner ">
+        <!-- logo start -->
+        <div class="page-logo">
+          <a href="{{ url_for('index') }}">
+            <span class="logo-icon material-icons fa-rotate-45">school</span>
+            <span class="logo-default">TRINITY</span> </a>
+        </div>
+        <!-- logo end -->
+        <ul class="nav navbar-nav navbar-left in">
+          <li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
+        </ul>
+        <form class="search-form-opened" action="#" method="GET">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search..." name="query">
+            <span class="input-group-btn">
+              <a href="javascript:;" class="btn submit">
+                <i class="icon-magnifier"></i>
+              </a>
+            </span>
+          </div>
+        </form>
+        <!-- start mobile menu -->
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+          data-target=".navbar-collapse">
+          <span></span>
+        </a>
+        <!-- end mobile menu -->
+        <!-- start header menu -->
+        <div class="top-menu">
+          <ul class="nav navbar-nav pull-right">
+            <!-- start language menu -->
+            <li><a href="javascript:;" class="fullscreen-btn"><i class="fa fa-arrows-alt"></i></a></li>
+            
+            <!-- end language menu -->
+            
+            <!-- start manage user dropdown -->
+            <li class="dropdown dropdown-user">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                data-close-others="true">
+                <img alt="" class="img-circle " src="{{ url_for('static', filename='assets/img/tunde.jpg' )}}" />
+                <span class="username username-hide-on-mobile"> Tunde </span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-default">
+                <li>
+                  <a href="user_profile.html">
+                    <i class="icon-user"></i> Profile </a>
+                </li>
+                <li class="divider"> </li>
+                <li>
+                  <a href="lock_screen.html">
+                    <i class="icon-lock"></i> Lock
+                  </a>
+                </li>
+                <li>
+                  <a href="login.html">
+                    <i class="icon-logout"></i> Log Out </a>
+                </li>
+              </ul>
+            </li>
+            <!-- end manage user dropdown -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end header -->
+    <!-- start page container -->
+    <div class="page-container">
+    <!-- start page container -->
+    <div class="page-container">
+      <!-- start sidebar menu -->
+      <div class="sidebar-container">
+        <div class="sidemenu-container navbar-collapse collapse fixed-menu">
+          <div id="remove-scroll" class="left-sidemenu">
+            <ul class="sidemenu  page-header-fixed sidemenu-hover-submenu" data-keep-expanded="false"
+              data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+              <li class="sidebar-toggler-wrapper hide">
+                <div class="sidebar-toggler">
+                  <span></span>
+                </div>
+              </li>
+              <li class="sidebar-user-panel">
+                <div class="user-panel">
+                  <div class="pull-left image">
+                    <img src="{{ url_for('static', filename='assets/img/tunde.jpg' )}}" class="img-circle user-img-circle"
+                      alt="User Image" />
+                  </div>
+                  <div class="pull-left info">
+                    <p> Tunde A.</p>
+                    <a href="#"><i class="fa fa-circle user-online"></i><span class="txtOnline">
+                        Online</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item start active open">
+                <a href="{{ url_for('index') }}" class="nav-link nav-toggle"> <i class="material-icons">dashboard</i>
+                  <span class="title">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('professors') }}" class="nav-link nav-toggle"> <i class="material-icons">person</i>
+                  <span class="title">Professors</span> <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="{{ url_for('professors') }}" class="nav-link "> <span class="title">All
+                        Professors</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('add_professor') }}" class="nav-link "> <span
+                        class="title">Add Professor</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('edit_professor') }}" class="nav-link "> <span class="title">Edit
+                        Professor</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('about_professor') }}" class="nav-link "> <span class="title">About
+                        Professor</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('students') }}" class="nav-link nav-toggle"><i class="material-icons">group</i>
+                  <span class="title">Students</span><span class="arrow"></span></a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="{{ url_for('students') }}" class="nav-link "> <span class="title">All
+                        Students</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('add_student') }}" class="nav-link "> <span class="title">Add
+                        Student</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('edit_student') }}" class="nav-link "> <span class="title">Edit
+                        Student</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('about_student') }}" class="nav-link "> <span class="title">About
+                        Student</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('courses') }}" class="nav-link nav-toggle"> <i class="material-icons">school</i>
+                  <span class="title">Courses</span> <span class="arrow"></span>
+                  <span class="label label-rouded label-menu label-success">new</span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="{{ url_for('courses') }}" class="nav-link "> <span class="title">All
+                        Courses</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('add_course') }}" class="nav-link "> <span class="title">Add
+                        Course</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('edit_course') }}" class="nav-link "> <span class="title">Edit
+                        Course</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('about_course') }}" class="nav-link "> <span class="title">About
+                        Course</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('faculties') }}" class="nav-link nav-toggle"> <i class="material-icons">business</i>
+                  <span class="title">Faculties</span> <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="{{ url_for('faculties') }}" class="nav-link "> <span class="title">All
+                        Faculties</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('add_faculty') }}" class="nav-link "> <span
+                        class="title">Add Faculty</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('edit_faculty') }}" class="nav-link "> <span class="title">Edit
+                        Faculty</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('departments') }}" class="nav-link nav-toggle"> <i class="material-icons">business</i>
+                  <span class="title">Departments</span> <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="{{ url_for('departments') }}" class="nav-link "> <span class="title">All
+                        Departments</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('add_department') }}" class="nav-link "> <span
+                        class="title">Add Department</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('edit_department') }}" class="nav-link "> <span class="title">Edit
+                        Department</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('staffs') }}" class="nav-link nav-toggle"> <i class="material-icons">face</i>
+                  <span class="title">Staff</span> <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="{{ url_for('staffs') }}" class="nav-link "> <span class="title">All
+                        Staff</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('add_staff') }}" class="nav-link "> <span class="title">Add
+                        Staff</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('edit_staff') }}" class="nav-link "> <span class="title">Edit
+                        Staff</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('about_staff') }}" class="nav-link "> <span class="title">Staff
+                        Profile</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-toggle"> <i class="material-icons">event</i>
+                  <span class="title">Event Management</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-toggle"> <i
+                    class="material-icons">airline_seat_individual_suite</i>
+                  <span class="title">Holiday</span> <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link "> <span class="title">All
+                        Holiday</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link "> <span class="title">Add
+                        Holiday Bootstrap</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link "> <span class="title">Edit
+                        Holiday</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link "> <span class="title">Holiday
+                        Calendar</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-toggle">
+                  <i class="material-icons">email</i>
+                  <span class="title">Email</span>
+                  <span class="arrow"></span>
+                  <span class="label label-rouded label-menu label-danger">new</span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                      <span class="title">Inbox</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                      <span class="title">View Mail</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                      <span class="title">Compose Mail</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('fees') }}" class="nav-link nav-toggle"> <i class="material-icons">monetization_on</i>
+                  <span class="title">Fees</span> <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="{{ url_for('fees') }}" class="nav-link "> <span class="title">Fees
+                        Collection</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('add_fee') }}" class="nav-link "> <span class="title">Add
+                        Fees</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url_for('fee_receipt') }}" class="nav-link "> <span class="title">Fee
+                        Receipt</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                  <i class="material-icons">map</i>
+                  <span class="title">Maps</span>
+                  <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                      <span class="title">Google Maps</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                      <span class="title">Vector Maps</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end sidebar menu -->
+      <!-- start page content -->
+      <div class="page-content-wrapper">
+
+          {% block body %}
+
+          {% endblock %}
+      </div>
+      <!-- end page content -->
+    </div>
+    <!-- end page container -->
+    <!-- start footer -->
+    <div class="page-footer">
+      <div class="page-footer-inner"> 2019 &copy; Trinity University By
+        <a href="mailto:redstartheme@gmail.com" target="_top" class="makerCss">Ayejafo Tunde</a>
+      </div>
+      <div class="scroll-to-top">
+        <i class="icon-arrow-up"></i>
+      </div>
+    </div>
+    <!-- end footer -->
+	
+  <!-- start js include path -->
+  <script src="{{ url_for('static', filename='assets/plugins/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/plugins/popper/popper.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/plugins/jquery-blockui/jquery.blockui.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
+   <!-- bootstrap -->
+  <script src="{{ url_for('static', filename='assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/plugins/sparkline/jquery.sparkline.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/pages/sparkline/sparkline-data.js') }}"></script>
+  <!-- Common js-->
+  <script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/layout.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/theme-color.js') }}"></script>
+   <!-- material -->
+  <script src="{{ url_for('static', filename='assets/plugins/material/material.min.js') }}"></script>
+  <!-- chart js -->
+  <script src="{{ url_for('static', filename='assets/plugins/chart-js/Chart.bundle.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/plugins/chart-js/utils.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/pages/chart/chartjs/home-data.js') }}"></script>
+  <!-- summernote -->
+  <script src="{{ url_for('static', filename='assets/plugins/summernote/summernote.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/pages/summernote/summernote-data.js') }}"></script>
+  <!-- end js include path -->
+  </body>
+  
+</html>
